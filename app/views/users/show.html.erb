@@ -1,0 +1,13 @@
+<% unless @user.words.empty? %>	   	
+	<div class="grid_7">
+	 <p> <b><%= "Word".pluralize %></b></p>
+	<%= render :partial => 'shared/word', :collection => @words %> 
+	</div>  
+<% end -%>	                              
+     
+<% unless @user.recordings.empty? %>
+	<div class="grid_7">
+		<p> <b><%= "Recording".pluralize %></b></p>  	   	
+	<%= render :partial => 'shared/recording', :collection => @recordings %>
+	</div>    
+<% end -%>

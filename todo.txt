@@ -1,0 +1,33 @@
+push to heroku/git
+Add twilio method to Recordings 
+AJAXIFY: Form to call switches to form to share, form to call switches to upload mp3. Share POPUP. Upvote. Next page.
+remove superfluous views
+Give creators the ability to delete words/recordings
+Admin delete users/words/recordings
+Limit Length of short_text = DO ALL VALIDATION  
+Make a share popup, make a share email fielsd 
+add pagination
+look at invite only system/cancan
+look at oauth login system       
+Invite form creates table with index on email address, and word ID. Email matching to wordID determines view/post
+maybe a follow/favorite function 
+Private Word has Users <> Users have Private word
+Create destroy recording
+@words show: new user appear before login /share w/ email form show after login
+picture upload 
+upvote/flag 
+
+
+done:
+@words show: new user appear before login after: make call   
+@blue form, (make call now button disappear when logged in but not on word page)      
+
+
+
+---------
+what will my share function look like? Just use a controller?
+does share need db info? 
+have enter your contact info change to "share this word" once logged in.
+Can you invite anyone that views your post on facebook?
+Create user model   
+reply to an audio review with another audio review?
