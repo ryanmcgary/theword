@@ -5,9 +5,12 @@
 				<div id="nav" class="grid_13">
 					<div id="navbar">
 						<p id="navigation">
+							<%- flash.each do |name, msg| -%>
+				        <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+				      <%- end -%>
 						<%= link_to "Create a Word", new_word_path %> | <%= link_to "List Words ", words_path %> | 
 						<% if user_signed_in? %>
-							<%= link_to current_user.name + " Profile", current_user %> | <%= link_to 'sign out', destroy_user_session_path %>
+							<%#= link_to current_user.name + " Profile", current_user %> | <%= link_to 'sign out', destroy_user_session_path %>
 							</p>
 						<% else %>
 							</p>
