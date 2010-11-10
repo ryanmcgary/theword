@@ -7,7 +7,7 @@ Theword::Application.routes.draw do
   
   match "/recordings/makecall(.:format)" => "recordings#makecall"
         
-  root :to => "words#index", 
+  root :to => "words#index" 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
