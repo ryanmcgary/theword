@@ -72,12 +72,6 @@ class RecordingsController < ApplicationController
       @record = BASE_URL + '/record.xml'  ##Sets GOTO url when there is a timeout from silence 
       @trunk = BASE_URL + '/trunk.xml' #Sets GOTO url when there is a timeout from silence 
       
-      if params['Digits'] == '9'
-          redirect_to :action => 'hangup'
-          return
-      end 
-
-
       respond_to do |format|
         format.xml { @record }
       end
@@ -93,7 +87,12 @@ class RecordingsController < ApplicationController
     def record            
       @trunk = BASE_URL + '/trunk.xml' #Sets POST url when recording is done 
       @record = BASE_URL + '/record.xml' #Sets GOTO url when there is a timeout from silence  
-
+      
+      if params['Digits'] == '9'
+          redirect_to :action => 'hangup'
+          return
+      end
+      
       respond_to do |format|
           format.xml { @trunk }
       end            
