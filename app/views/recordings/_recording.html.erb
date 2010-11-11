@@ -1,6 +1,6 @@
 <div id="box">					
 <p id="title"><%= recording.alias == '' ? recording.user.name : recording.alias %></p>
 <p id="context"><%= recording.short_text %></p>
-<div id="lilbox"><%= link_to '»', recording.audio_file %></div><div id="lilbox"></div><div id="lilbox"></div>   
+<div id="lilbox"><%= link_to '»', recording.audio_file, :target => '_blank' %></div><div id="lilbox"></div><div id="lilbox"></div>   
 
 </div>
