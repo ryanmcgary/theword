@@ -25,6 +25,7 @@
 #box #context{
    	margin: 6px 15px 0px 15px;
 	text-align: justify;
+	height:52px;   
 	font: 75% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
 }
 

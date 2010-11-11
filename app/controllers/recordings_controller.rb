@@ -31,7 +31,7 @@ class RecordingsController < ApplicationController
     def show
       @recording = Recording.find(params[:id])  
       @title = ( "View " + @recording.user.name.pluralize + " Recording" )
-      
+      @username = User.find(params[:user_id])
       
       respond_to do |format|
         format.html # show.html.erb

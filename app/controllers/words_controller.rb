@@ -20,7 +20,8 @@ class WordsController < ApplicationController
     @recording = Recording.new
     @recording.word_id = @word.id
     @recordings = @word.recordings
-    @title = @word.title
+    @title = @word.title 
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @word }
