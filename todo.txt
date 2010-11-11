@@ -1,4 +1,4 @@
-Call completed always posts to editrecording.xml. flip published switch. Create XML view that hangs up to not publish.
+Create XML view that hangs up to not publish.
 Give people the chance to delete their own call (during call maybe?).
 Make a share popup: Twitter, Facebook, Reddit
 Make a share via email field
@@ -25,6 +25,7 @@ push to heroku/git
 fix pluralize     
 Add twilio method to Recordings      
 @words show: new user appear before login /share w/ email form show after login 
+Call completed always posts to editrecording.xml. flip published switch. 
 
 ---------
 what will my share function look like? Just use a controller?

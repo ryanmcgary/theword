@@ -15,7 +15,7 @@ BASE_URL = "http://floating-wind-33.heroku.com/recordings"  #"http://localhost:3
 CALLER_ID = '6158525397'   
 
 class RecordingsController < ApplicationController
-    before_filter :authenticate_user!, :except => [:show, :index, :trunk, :record, :editrecording]  
+    before_filter :authenticate_user!, :except => [:show, :index, :trunk, :record, :editrecording, :hangup]  
     respond_to :html, :xml  
 
     def create
@@ -71,6 +71,12 @@ class RecordingsController < ApplicationController
     def trunk
       @record = BASE_URL + '/record.xml'  ##Sets GOTO url when there is a timeout from silence 
       @trunk = BASE_URL + '/trunk.xml' #Sets GOTO url when there is a timeout from silence 
+      
+      if params['Digits'] == '9'
+          redirect_to :action => 'hangup'
+          return
+      end 
+
 
       respond_to do |format|
         format.xml { @record }
@@ -105,10 +111,14 @@ class RecordingsController < ApplicationController
       end
       
       respond_to do |format|
-          format.xml { @editrecording }
+        format.xml { @editrecording }
       end     
     end
     
-    
+    def hangup
+      respond_to do |format|
+        format.xml { render :action => "hangup.xml.builder", :layout => false } 
+      end
+    end
               
 end

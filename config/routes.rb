@@ -7,6 +7,7 @@ Theword::Application.routes.draw do
   match "/recordings/trunk.:format"         => "recordings#trunk"
   match "/recordings/makecall.:format"      => "recordings#makecall"
   match "/recordings/record.:format"        => "recordings#record"
+  match "/recordings/hangup.:format"        => "recordings#hangup" 
   match "/recordings/makecall(.:format)"    => "recordings#makecall"  
 
   resources :recordings   
