@@ -98,9 +98,9 @@ class RecordingsController < ApplicationController
       @record = BASE_URL + '/record.xml' #Sets GOTO url to re-record 
       @recordingurl = Recording.where(:call_id => params[:CallSid]).first.audio_file #Finds new recording and sends it to xml for playback
 
-      if params[:CallStatus] = "completed" then  
+      if params[:CallStatus] == "completed" then  
         @phonecall = Recording.where(:call_id => params[:CallSid]).first
-        @phonecall.update_attributes(:callcompleted => 1) 
+        @phonecall.update_attributes(:callcompleted => '1') 
         redirect_to :action => "editrecording"
       end
       
