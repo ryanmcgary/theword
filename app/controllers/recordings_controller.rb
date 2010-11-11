@@ -62,7 +62,6 @@ class RecordingsController < ApplicationController
       ourform = { :call_id => resp2}                         
       @recording = current_user.recordings.build(params[:recording])
       @recording[:call_id] = resp2
-      #@recording[:word_id] = words_path
       if @recording.save             
         flash[:success] = "Calling #{ current_user.phone_number }... "
         redirect_to words_path
