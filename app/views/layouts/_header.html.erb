@@ -10,7 +10,7 @@
 				      <%- end -%>
 						<%= link_to "Create a Word", new_word_path %> | <%= link_to "List Words ", words_path %> | 
 						<% if user_signed_in? %>
-							<%#= link_to current_user.name + " Profile", current_user %> | <%= link_to 'sign out', destroy_user_session_path %>
+							<%= link_to current_user.email + " Profile", current_user %> | <%= link_to 'sign out', destroy_user_session_path %>
 							</p>
 						<% else %>
 							</p>
