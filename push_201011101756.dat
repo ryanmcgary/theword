@@ -1,0 +1,1 @@
+{"local_tables_info":{"schema_migrations":7,"users":5,"recordings":37,"words":8},"remote_url":"http://heroku:osui59a24am79x@taps3.heroku.com","table_filter":null,"session_uri":"/sessions/8377973067","klass":"Taps::Push","database_url":"sqlite://db/development.sqlite3","stream_state":{},"completed_tables":["words","schema_migrations","recordings"]}

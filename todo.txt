@@ -1,6 +1,3 @@
-fix pluralize
-
-
 Add twilio method to Recordings 
 AJAXIFY: Form to call switches to form to share, form to call switches to upload mp3. Share POPUP. Upvote. Next page.
 remove superfluous views
@@ -25,7 +22,7 @@ done:
 @words show: new user appear before login after: make call   
 @blue form, (make call now button disappear when logged in but not on word page)      
 push to heroku/git  
-
+fix pluralize     
 
 ---------
 what will my share function look like? Just use a controller?

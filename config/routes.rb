@@ -1,12 +1,16 @@
 Theword::Application.routes.draw do
   resources :words    
-  resources :recordings
-
   devise_for :users
   resources :users
   
-  match "/recordings/makecall(.:format)" => "recordings#makecall"
-        
+  match "/recordings/editrecording.:format" => "recordings#editrecording"
+  match "/recordings/trunk.:format"         => "recordings#trunk"
+  match "/recordings/makecall.:format"      => "recordings#makecall"
+  match "/recordings/record.:format"        => "recordings#record"
+  match "/recordings/makecall(.:format)"    => "recordings#makecall"  
+
+  resources :recordings   
+  
   root :to => "words#index" 
 
   # The priority is based upon order of creation:
