@@ -1,21 +1,20 @@
-Add twilio method to Recordings 
-Call completed always posts to editrecording.xml
-AJAXIFY: Form to call switches to form to share, form to call switches to upload mp3. Share POPUP. Upvote. Next page.
-remove superfluous views
-Give creators the ability to delete words/recordings
-Admin delete users/words/recordings
-Limit Length of short_text = DO ALL VALIDATION  
-Make a share popup, make a share email fielsd 
-add pagination
+Call completed always posts to editrecording.xml. flip published switch. Create XML view that hangs up to not publish.
+Give people the chance to delete their own call (during call maybe?).
+Make a share popup: Twitter, Facebook, Reddit
+Make a share via email field
+Admin delete users/words/recordings -- Give creators the ability to delete words/recordings
+DO ALL VALIDATION: Limit Length of short_text, require name, require short text, require 
 look at invite only system/cancan
 look at oauth login system       
-Invite form creates table with index on email address, and word ID. Email matching to wordID determines view/post
-maybe a follow/favorite function 
-Private Word has Users <> Users have Private word
-Create destroy recording
-@words show: new user appear before login /share w/ email form show after login
+Authorization to view WORD via an EMAIL include list. Private Word has Users <> Users have Private word   
+Create destroy recording by user
+add pagination  
+AJAXIFY: Form to call switches to form to share, form to call switches to upload mp3. Share POPUP. Upvote. Next page.
+upvote/flag
 picture upload 
-upvote/flag 
+remove superfluous views   
+ 
+
 
 4157845905
 
@@ -24,6 +23,8 @@ done:
 @blue form, (make call now button disappear when logged in but not on word page)      
 push to heroku/git  
 fix pluralize     
+Add twilio method to Recordings      
+@words show: new user appear before login /share w/ email form show after login 
 
 ---------
 what will my share function look like? Just use a controller?

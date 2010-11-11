@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101111020738) do
+ActiveRecord::Schema.define(:version => 20101111181452) do
 
   create_table "recordings", :force => true do |t|
     t.integer  "word_id"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20101111020738) do
     t.datetime "updated_at"
     t.string   "alias"
     t.string   "short_text"
+    t.boolean  "callcompleted"
   end
 
   add_index "recordings", ["user_id"], :name => "index_recordings_on_user_id"
