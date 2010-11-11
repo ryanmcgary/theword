@@ -102,7 +102,8 @@ class RecordingsController < ApplicationController
         @phonecall = Recording.where(:call_id => params[:CallSid]).first
         @phonecall.update_attributes(:callcompleted => 1) 
         redirect_to :action => "editrecording"
-
+      end
+      
       respond_to do |format|
           format.xml { @editrecording }
       end     
