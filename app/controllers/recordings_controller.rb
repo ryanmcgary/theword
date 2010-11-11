@@ -9,13 +9,13 @@ ACCOUNT_TOKEN = '64e5c64955c6b9e1d68f0a9f58b0944b'
 API_VERSION = '2010-04-01'
 
 # base URL of this application
-BASE_URL = "http://floating-wind-33.heroku.com/recordings" #"http://localhost:3000/recordings"  #
+BASE_URL = "http://floating-wind-33.heroku.com/recordings"  #"http://localhost:3000/recordings"  
 
 # Outgoing Caller ID you have previously validated with Twilio
 CALLER_ID = '6158525397'   
 
 class RecordingsController < ApplicationController
-    before_filter :authenticate_user!, :except => [:show, :index]  
+    before_filter :authenticate_user!, :except => [:show, :index, :trunk, :record, :editrecording]  
     respond_to :html, :xml  
 
     def create
@@ -50,21 +50,21 @@ class RecordingsController < ApplicationController
       }              
     
       #begin
-        account = Twilio::RestAccount.new(ACCOUNT_SID, ACCOUNT_TOKEN)
-              resp = account.request(
-                  "/#{API_VERSION}/Accounts/#{ACCOUNT_SID}/Calls",
-                  'POST', d)      
-              resp.error! unless resp.kind_of? Net::HTTPSuccess      
-    
+      account = Twilio::RestAccount.new(ACCOUNT_SID, ACCOUNT_TOKEN)
+                  resp = account.request(
+                      "/#{API_VERSION}/Accounts/#{ACCOUNT_SID}/Calls",
+                      'POST', d)      
+                  resp.error! unless resp.kind_of? Net::HTTPSuccess               
+      
       # save initial form and callid to database
       resp = Hash.from_xml(resp.body)
-      resp2 = resp['TwilioResponse']['Call']['Sid'] #"324234wer"    
+      resp2 = resp['TwilioResponse']['Call']['Sid'] # "324234wer" # #   
       ourform = { :call_id => resp2 }                         
       @recording = current_user.recordings.build(params[:recording])
       @recording[:call_id] = resp2
       if @recording.save             
         flash[:success] = "Calling #{ current_user.phone_number }... "
-        redirect_to words_path
+        redirect_to :controller => "words", :action => "show", :id => @recording.word_id
       end
     end
     
