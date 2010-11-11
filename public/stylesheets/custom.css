@@ -30,11 +30,19 @@
 
 #box #lilbox{ 
 	float: left;
+	text-align: center;
+	font: 200% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
 	margin: 10px 0px 0px 12.5px;
 	height: 40px;
 	width: 40px;
 	border: 1px solid grey;
 }
+
+#box #lilbox a:link {color: white; text-decoration: none; }
+#box #lilbox a:active {color: white; text-decoration: none; }
+#box #lilbox a:visited {color: white; text-decoration: none; }
+#box #lilbox a:hover {color: white; text-decoration: none; }
+
 
 /* content section for word/index */
 

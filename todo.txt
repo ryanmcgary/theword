@@ -1,4 +1,5 @@
 Add twilio method to Recordings 
+Call completed always posts to editrecording.xml
 AJAXIFY: Form to call switches to form to share, form to call switches to upload mp3. Share POPUP. Upvote. Next page.
 remove superfluous views
 Give creators the ability to delete words/recordings
