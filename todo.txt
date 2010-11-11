@@ -1,5 +1,5 @@
 fix pluralize
-Get heroku working submit form to separate actions action in user controller "createaddname/phone" 
+
 
 Add twilio method to Recordings 
 AJAXIFY: Form to call switches to form to share, form to call switches to upload mp3. Share POPUP. Upvote. Next page.
