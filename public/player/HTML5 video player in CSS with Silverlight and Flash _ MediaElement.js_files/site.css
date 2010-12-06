@@ -1,0 +1,153 @@
+body {
+	background: #142d3c;
+	background: #142d3c -webkit-gradient(radial, 50% 50, 200, 50% 50, 500, from(#1D5972), to(#142D3C)) no-repeat #142D3C;
+	background: #142d3c -moz-radial-gradient(50% 50px 90deg, circle farthest-side, #1D5972, #142D3C) no-repeat;
+	
+	font-family: 'Helvetica Neue', Arial, san-serif;
+	color: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+	line-height: 1.4em;
+	margin: 10px 0;	
+	font-family: 'Molengo', Helvetica, Arial;
+}
+p {
+	line-height: 1.4em;
+	margin: 10px 0;	
+}
+li {
+	line-height: 1.4em;
+	margin: 0 0 0 20px;
+	list-style-type: square;
+}
+a {
+	color: #fff;
+}
+small {
+	font-size: 80%;
+}
+
+#header {
+	padding: 20px 0 0 0;
+	text-align: center;
+}
+#header h1 {
+	font-size: 40px;
+	font-family: 'Molengo', Courier;
+	color: #fff;
+}
+#header h1 a {
+	text-decoration: none;
+	color: #fff;
+}
+#header p {
+	margin: 10px;
+	color: #fff;
+}
+
+#example-video {
+	margin: 20px 160px;
+	width: 640px;
+	height: 360px;
+}
+
+#example-audio {
+	margin: 20px 0;
+	width: 300px;
+}
+
+.example-player {
+	-webkit-box-shadow: rgba(255,255,255,0.3) 0 0 30px;
+	-moz-box-shadow: rgba(255,255,255,0.3) 0 0 30px;
+	box-shadow: rgba(255,255,255,0.3) 0 0 30px;
+}
+
+.description {
+	font-size: 10px;
+	text-align: center;
+}
+
+pre {
+	background: #000;
+	background: rgba(0,0,0,0.9);
+	color: #f9f9f9;
+	border: solid 1px #ccc;
+	padding: 10px;
+	font-size: 13px;
+}
+
+#browsers {
+	margin: 0 0 0 20px;
+}
+#browsers img {
+	display: inline-block;
+	margin: 4px 4px 0 0;
+	height: 30px;
+}
+
+
+
+a.button {
+	display: inline-block;
+	margin: 0 0 5px 5px ;
+	padding: 6px 10px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 13px;
+	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	background: #64a8d5;
+	background: -webkit-gradient(linear, left top, left bottom, from(#64a8d5), to(#2d75ca));
+	background: -moz-linear-gradient(top, #64a8d5, #2d75ca);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#64a8d5, endColorstr=#2d75ca);
+	
+	-webkit-box-shadow: rgba(100,100,100,0.3) 0 1px 3px;
+	-moz-box-shadow: rgba(100,100,100,0.3)  0 1px 3px;
+	box-shadow: rgba(100,100,100,0.3)  0 1px 3px;
+}
+a.button:hover {
+	top: 1px;
+}
+
+#footer {
+	margin-top: 40px;
+	padding-bottom: 20px;
+	font-size: 11px;
+	text-align: center;
+}
+
+h2 {
+	color: #ddd;
+}
+
+.api h4 {
+
+}
+.api h5 {
+	color: #64A8D5;
+}
+.api table {
+	border: solid 1px #A5C25C;
+	border-collapse: collapse;
+	background: #000;
+}
+.api table tr td {
+	width: 260px;
+} 
+.api table tr td:first-child {
+	width: 200px;
+	color: #A5C25C;
+} 
+
+.api table td, .api table th {
+	padding: 2px 3px;
+	border: solid 1px #ccc;
+}
+
+.info {
+	font-size: 10px;
+}

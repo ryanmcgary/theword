@@ -1,3 +1,11 @@
-<%= link_to word.title, :controller => "words", :action => "show", :id => word.id %> <br />
+<%= link_to word.title, :controller => "words", :action => "show", :id => word.id %>
+
+
+<% if current_user == word.user %>
+|<%= link_to 'Edit', edit_word_path(word) %>   
+|<%= link_to 'Destroy', word, :confirm => 'Are you sure?', :method => :delete %>
+
+<% end %>
+ <br /> 
 
 

@@ -1,1 +1,13 @@
-<%= link_to recording.audio_file, :controller => "recordings", :action => "show", :id => recording.id %> <br />
+<% if recording.callcompleted? %> 
+  <%= link_to recording.audio_file, :controller => "recordings", :action => "show", :id => recording.id %>
+
+	<% if current_user == recording.user %>
+  <%= link_to "delete", recording, :method => :delete,
+                                   :confirm => "You sure?",
+                                   :title => recording.audio_file %>
+  
+	<% end %>
+	 <br /> 
+<% end -%>
+
+

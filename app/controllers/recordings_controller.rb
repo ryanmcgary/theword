@@ -15,9 +15,10 @@ BASE_URL = "http://floating-wind-33.heroku.com/recordings"  #"http://localhost:3
 CALLER_ID = '6158525397'   
 
 class RecordingsController < ApplicationController
-    before_filter :authenticate_user!, :except => [:show, :index, :trunk, :record, :editrecording, :hangup]  
+    before_filter :authenticate_user!, :except => [:show, :index, :trunk, :record, :editrecording, :hangup, :destroy]  
+    before_filter :authorized_user, :only => :destroy  
     respond_to :html, :xml  
-
+    
     def create
       @recording = current_user.recordings.build(params[:recording])
              if @recording.save
@@ -28,10 +29,15 @@ class RecordingsController < ApplicationController
              end             
     end
     
+    def destroy
+      @recording.destroy
+      redirect_to :controller => "users", :action => "show", :id => @recording.user.id   
+    end
+    
     def show
       @recording = Recording.find(params[:id])  
       @title = ( "View " + @recording.user.name.pluralize + " Recording" )
-      @username = User.find(params[:user_id])
+     
       
       respond_to do |format|
         format.html # show.html.erb
@@ -119,5 +125,12 @@ class RecordingsController < ApplicationController
         format.xml { render :action => "hangup.xml.builder", :layout => false } 
       end
     end
-              
+
+    private
+
+      def authorized_user
+        @recording = Recording.find(params[:id])
+        redirect_to root_path unless current_user == (@recording.user)      
+      end
+     
 end

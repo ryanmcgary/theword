@@ -3,7 +3,9 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.1'
 gem 'devise'
 gem 'twiliolib'       
-
+gem 'will_paginate', '~> 3.0.beta'
+gem 'jquery-rails'
+ 
 group :development do
 	gem 'annotate-models', '1.0.4'
 end 

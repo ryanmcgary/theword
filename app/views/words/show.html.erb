@@ -1,11 +1,1 @@
-<div class="grid_4">Order by:<%= link_to 'Edit', edit_word_path(@word) %> |
-<%= link_to 'Back', words_path %></div>
-<div id="content" class="grid_16">
-
-	<% unless @word.recordings.empty? %>
-		<%= render @recordings %>
-	<% end -%>
-
-</div> 
-
-
+<%= render @recordings %>

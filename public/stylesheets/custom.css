@@ -1,97 +1,129 @@
-/*content section*/
-#contentwrapper{
-	background-color: #121212;
-}       
+a:link {color: white;}
+a:active {color: white;}
+a:visited {color: white;}
+a:hover {color: gray;}
 
-#content{
-	margin-top: 10px;
-} 
-
-#box{      
-	margin-right: 9px;
-	margin-bottom: 10px;
-	float: left;
-	width: 175px;
-	height: 143px;
-	border: 1px solid blue;
-	
+/*social icon*/
+.addthis_toolbox{
+	float:center;
+	text-align:center;
+	margin-bottom:-40px;
 }
 
-#box #title{
-	margin: 5px 0px 0px 7px;
-	font: 125% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
-}                                                                  
-
-#box #context{
-   	margin: 6px 15px 0px 15px;
-	text-align: justify;
-	height:52px;   
-	font: 75% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+.addthis_toolbox .custom_images a {
+    width: 64px;
+    height: 64px;
+    margin: 0;
+    padding: 0;
+}
+.addthis_toolbox .custom_images a img {
+    opacity: 1;
+}
+.addthis_toolbox .custom_images a:hover img {
+    opacity: 0.75;
 }
 
-#box #lilbox{ 
-	float: left;
-	text-align: center;
-	font: 200% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
-	margin: 10px 0px 0px 12.5px;
+/*header info*/
+#header {
 	height: 40px;
-	width: 40px;
-	border: 1px solid grey;
 }
 
-#box #lilbox a:link {color: white; text-decoration: none; }
-#box #lilbox a:active {color: white; text-decoration: none; }
-#box #lilbox a:visited {color: white; text-decoration: none; }
-#box #lilbox a:hover {color: white; text-decoration: none; }
-
-
-/* content section for word/index */
-
-#word-index{
-	margin: 5px 0px 0px 20px;
-	font: 100% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+#logo{
+	font: 180% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	margin-top:12px;     
 }
 
-#word-index table td{
-	padding: 5px 8px 2px 0px;
+#greeting p{
+	margin: 22px 0px 0px -20px;
+	font: 12px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif; 
 }
 
-#word-index table th{
-	text-align:left;
-	font-size:120%;
-} 
+#greeting a{
+	color:white;
+	font: 12px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif; 
+}
+
+#share{
+	float:right;
+	text-align: right;
+	margin-bottom: -20px;
+}
 
 /*middle section*/
 #main { 
-	background-color: #363636;
-	height: 160px;
+	background-color: black;
+	height: 280px;
+	background-color: #28e81e;
+	margin-bottom:10px;   
+	}   
+
+/*left slide*/
+#word { 
+	display: table; 
+	height: 270px; 
+	#position: relative; 
+	overflow: hidden;
 	}
 
-/*middle right section*/
-                  
-#formcontainer {
-	float: right;
-	height: 205px;
-}     
+#wordcontainer { 
+	#position: absolute; 
+	#top: 50%;
+	display: table-cell; 
+	padding-top: 50px;
+	} 
 
+#theword { 
+	float: center;
+	text-align: left;
+	margin: 0pt 0px 0pt 0pt;
+	font-size: 150%; 
+	#position: relative; 
+	#top: -50%;
+	}
+
+#thewordmain { 
+	float: center;
+	text-align: left;
+	margin: 0pt 0px 0pt 0pt;
+	font-size: 100%; 
+	#position: relative; 
+	#top: -50%;
+	}	
+
+#theword2{
+	color: black; 
+	float: center;
+	text-align: left;
+	margin: 0pt 0px 0pt 0pt;
+	font-size: 150%; 
+	#position: relative; 
+	#top: -50%;
+	}   
+
+#theword2 a:link, a:visited{
+	color:black;
+	font-size: 75%;
+} 
+
+.field{
+	color:black;
+}
+
+/*right slider*/
 #form {
-	#position: relative;
-	background-color: #262f60;
-	height: 195px;	
-	width: 400px;
+	float: right; 
+	#position: relative; 
+	width: 270px;
 	margin-top: 10px;
 }
 
 /*form*/
-#form .text{  /*text on left*/ 
-	float:left;
-	margin: 10px 0px 0px 20px;
-	padding-right: 5px;
-	height: 160px;
-	width: 125px; 
-/*	border-right-style: none/hidden/dotted/dashed/solid/double/groove/ridge/inset/outset; */
-	border-right: 2px ridge white;
+
+#form h2{
+ 	text-align: right;
+	margin-right:20px;
 }
+
 .edit_user div{
 	float: right;
 	text-align: right;
@@ -102,62 +134,72 @@
 	float:right;
 	border: 0px solid white; 
 }
+   
 
-                     
+/*content section*/
+#contentwrapper{
+	background-color:#303030;
+}       
 
-/*middle left section*/
-#word { 
-	display: table; 
-	height: 120px; 
-	#position: relative; 
-	overflow: hidden;
-	}
-
-#wordcontainer { 
-	#position: absolute; 
-	#top: 50%;
-	display: table-cell; 
-	vertical-align: middle;
-	} 
-
-#theword { 
-	float: center;
-	text-align: center;
-	margin: 0pt 0px 0pt 0pt;
-	font-size: 150%; 
-	#position: relative; 
-	#top: -50%;
-	}
-
-/*header info*/
-#header {
-	height: 74px;
+#content{
+	margin-top: 10px;
+	padding-bottom: 20px;
+	position:static;
 }
 
-#nav { 
-	display: table; 
-	height: 65px; 
-	#position: relative; 
-	overflow: hidden;
-	}
+#word-index{
+	font-size: 150%;
+}                   
 
-#navbar { 
-	#position: absolute; 
-	#top: 50%;
-	display: table-cell; 
-	vertical-align: middle;
-	} 
-	
-#navigation { 
-	float: right;
-	text-align: right; 
-	margin: 0pt 0px 0pt 0pt;
-	font-size: 150%; 
-	#position: relative; 
-	#top: -50%;
-	} 
+#word-index a{
+	color:white;
+}
+#user-index a{
+	color:white;
+	font-size: 75%;
+}
+#box{      
+	margin-right: 9px;
+	margin-bottom: 10px;
+	float: left;
+	width: 175px;
+	height: 143px;
+	border: 1px solid blue;
+	position: static;
+	overflow:hidden;
+} 
 
-	
+#box:hover{      
+	margin-right: 9px;
+	margin-bottom:-15px;
+	padding-bottom:8px;
+	float: left;
+	width: 175px;
+	height: 160px;
+	border: 1px solid blue;
+	position: static;
+	background-color: black;	
+}
+
+#show{
+	position:relative;
+	background-color:green;
+	height:60px;
+	text-align: right;    
+}
+
+#box #title{
+	margin: 5px 0px 0px 7px;
+	font: 125% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+}                                                                  
+
+#box #context{
+   	margin: 6px 15px 0px 15px;
+	text-align: justify;
+	font: 75% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	height:82px;
+}
+
 /*footer*/
 #footer{
 	margin-top: 10px;

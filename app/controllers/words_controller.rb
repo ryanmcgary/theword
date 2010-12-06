@@ -1,11 +1,11 @@
 class WordsController < ApplicationController
   before_filter :authenticate_user!, :except => [:show, :index]
-  def nil?; true; end
+  def nil?; true; end     
   # GET /words
   # GET /words.xml
   def index
     @word = Word.all
-    @title = "Add a New Word <a href='#{url_for(new_word_path)}'>Click Here</a>"
+    @title = "At good word you can hear trusted reviews"
 
     respond_to do |format|
       format.html # index.html.erb
@@ -81,9 +81,10 @@ class WordsController < ApplicationController
   def destroy
     @word = Word.find(params[:id])
     @word.destroy
-
+    
+    
     respond_to do |format|
-      format.html { redirect_to(words_url) }
+      format.html { redirect_to :controller => "users", :action => "show", :id => @word.user.id }
       format.xml  { head :ok }
     end
   end

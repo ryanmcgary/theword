@@ -1,24 +1,87 @@
-Create XML view that hangs up to not publish.
-Give people the chance to delete their own call (during call maybe?).
-Make a share popup: Twitter, Facebook, Reddit
-Make a share via email field
-Admin delete users/words/recordings -- Give creators the ability to delete words/recordings
-DO ALL VALIDATION: Limit Length of short_text, require name, require short text, require 
-look at invite only system/cancan
-look at oauth login system       
-Authorization to view WORD via an EMAIL include list. Private Word has Users <> Users have Private word   
-Create destroy recording by user
-add pagination  
-AJAXIFY: Form to call switches to form to share, form to call switches to upload mp3. Share POPUP. Upvote. Next page.
-upvote/flag
-picture upload 
-remove superfluous views   
+Add embed feature
+  Passing info in url
+	using iframe
+	change color scheme based on passed url
+	
+Change concept to secure/confirmed reviews
+add signin with twitter and linkedin
+Integrate project with EC2  		Online > Move MP3 files to EC2 
+
+
+Break add call, add text into partial.
+
+Launch rails site
+Update resume
+Finish my IU class
+Hobby of portuguese
+
  
+Add playlist embed feature			maybe
+Add Upvotes.                 		prob offline
+Make Screencast                 Online maybe
+
+Launch with ADD CALL
+Launch with ADD TEXT
+ADD MP3
+ADD PICTURE
+ADD VIDEO
+
+Right after launch:
+Add upload audio/attach video
+Login with twitter or facebook / auto tweet / post
+Follow a USER or WORD
+Create conference recording for interviews 
+Order by most pop users, most pop words.
+Embed player/Embed word/Embed
+Outsource an Iphone app 
+Sister Sites!
+
+Do offline:
+Add Javascript player                                     
+Redesign with slider and breadcrumb, share icons elsewhere
+Add Upvotes: Sort recordings by upvote (most/least), date added (old/new)
+	Button Increments Recording votes by one Easy
+	Button Decrements Recording votes by one 
+	Create Virtual table that tracks a bit field and when flipped creates an assoc between recording and user and increases recording vote_count by 1.  View will check for assoc exists? If it does then form will delete row and decrease vote_count by 1.
+	
+Maybe offline. Make a SECURE via email field
+
+YouTube. Use regex and sanatizer to confirm that url is youtube and there are no html tags. allow either with www. or without.
+	Embed youtube video <%= sanitize video.embed_code, :tags => %w(embed object param) %> 	
+	http://stackoverflow.com/questions/1970903/only-allow-video-embed-codes-rails   
+	sanatize()
+                           
+After core features
+-------
+AJAXIFY: Form to call switches to form to share, form to call switches to upload mp3. Share POPUP. Upvote. Next page.
+(offline) upvote/flag
+Prettify/Standardize form errors  / Add validation to update method?
+offline add pagination  
+
+Look into
+-----
+Authorization to view WORD via an EMAIL include list. Private Word has Users <> Users have Private word   
+look at invite only system/cancan
+look at oauth login system 
+                             
+
+At the very end / Maybe Never
+----------------
+remove superfluous views   
+picture upload  
+
+
 
 
 4157845905
 
-done:
+done: 
+offline (can't confirm it working though) Just share using Addthis. Use add this aquatics buttons!!!   
+require > recording.short_text > limit 140, require name, require phone#, 
+offline DO ALL VALIDATION: Limit Length of short_text, require name, require short text  
+offline Admin delete users/words/recordings -- Give creators the ability to delete words/recordings
+offline Create destroy recording by user  
+offline fix VIEW RECORDING BROKEN!! On users, change how recordings and words are listed(published only)  
 @words show: new user appear before login after: make call   
 @blue form, (make call now button disappear when logged in but not on word page)      
 push to heroku/git  
@@ -26,11 +89,6 @@ fix pluralize
 Add twilio method to Recordings      
 @words show: new user appear before login /share w/ email form show after login 
 Call completed always posts to editrecording.xml. flip published switch. 
+Create XML view that hangs up to not publish.  
+Give people the chance to delete their own call during call.   
 
----------
-what will my share function look like? Just use a controller?
-does share need db info? 
-have enter your contact info change to "share this word" once logged in.
-Can you invite anyone that views your post on facebook?
-Create user model   
-reply to an audio review with another audio review?

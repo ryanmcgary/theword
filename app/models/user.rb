@@ -9,4 +9,9 @@ class User < ActiveRecord::Base
   # relationships
   has_many :words
   has_many :recordings 
+  
+validates_presence_of :name, :on => :create, :message => "can't be blank"
+validates_presence_of :phone_number, :on => :create, :message => "can't be blank"
+validates_length_of :phone_number, :within => 10..10, :on => :create, :message => "must be 10 digits"
+validates_format_of :phone_number, :with => /^[\d]+$/, :on => :create, :message => "must be digits only"            
 end

@@ -1,0 +1,16 @@
+<% if params[:action] == "show" %>
+Record your word<br />
+<% form_for("recording", :url => recordings_makecall_path ) do |f| -%> 
+	<%= f.hidden_field :word_id %>
+	<div class="field">
+	<%= f.label :short_text, "Include a short message" %><br />
+	<%= f.text_area :short_text, :size => "20" %>
+	</div>
+	<div class="actions">
+	<%= f.submit "Call Me Now!", :id => "user_submit" %>	
+	</div>
+<% end -%>
+<% else %>
+Quick post to recent words<br /><br /><br />
+<%= link_to "Create new Word", new_word_path %>         
+<% end -%>

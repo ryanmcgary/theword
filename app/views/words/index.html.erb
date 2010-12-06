@@ -2,23 +2,14 @@
 <div id="word-index">
 <table>
   <tr>
-    <th>Title</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <td>Title</td>
   </tr>
 
 <% @word.each do |word| %>
   <tr>
-    <td><%= word.title %></td>
-    <td></td>
-    <td><%= link_to 'Show', word %></td>
-    <td><%= link_to 'Edit', edit_word_path(word) %></td>
-    <td><%= link_to 'Destroy', word, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to word.title, word %></td>
   </tr>
 <% end %>
 </table>
 </div>
 <br />
-

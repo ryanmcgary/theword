@@ -1,9 +1,14 @@
 <% if recording.callcompleted? %>
 <div id="box">					
-<p id="title"><%= recording.alias == '' ? recording.user.name : recording.alias %></p>
-<p id="context"><%= recording.short_text %></p>
-<div id="lilbox"><%= link_to '»', recording.audio_file, :target => '_blank' %></div><div id="lilbox"></div><div id="lilbox"></div>   
-
-</div> 
+	<p id="title"><%= recording.alias == '' ? recording.user.name : recording.alias %></p>
+	<p id="context"><%= recording.short_text %></p>
+	<audio id="player2" src="<%= recording.audio_file %>" type="audio/wav" width="72" controls="controls">
+		<p>Your browser leaves much to be desired.</p>			
+	</audio>
+	<div id="show">
+		<a class="addthis_button_more" addthis:url="<%= recording_url %>" ><img src="/images/addthis_64.png" width="20" height="20" alt="More..." /></a> 
+		Like (12) Comments (2)
+	</div>
+</div>  
 <% else %>
 <% end -%>
