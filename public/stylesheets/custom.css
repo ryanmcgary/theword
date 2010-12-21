@@ -1,3 +1,7 @@
+body {
+	font: 13px/1.5 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif; color: white;  
+}
+
 a:link {color: white;}
 a:active {color: white;}
 a:visited {color: white;}
@@ -52,7 +56,7 @@ a:hover {color: gray;}
 /*middle section*/
 #main { 
 	background-color: black;
-	height: 280px;
+	height: 150px;
 	background-color: #28e81e;
 	margin-bottom:10px;   
 	}   
@@ -60,7 +64,7 @@ a:hover {color: gray;}
 /*left slide*/
 #word { 
 	display: table; 
-	height: 270px; 
+	height: 140px; 
 	#position: relative; 
 	overflow: hidden;
 	}
@@ -113,7 +117,7 @@ a:hover {color: gray;}
 #form {
 	float: right; 
 	#position: relative; 
-	width: 270px;
+	width: 140px;
 	margin-top: 10px;
 }
 
@@ -157,7 +161,8 @@ a:hover {color: gray;}
 #user-index a{
 	color:white;
 	font-size: 75%;
-}
+}    
+
 #box{      
 	margin-right: 9px;
 	margin-bottom: 10px;
@@ -168,18 +173,6 @@ a:hover {color: gray;}
 	position: static;
 	overflow:hidden;
 } 
-
-#box:hover{      
-	margin-right: 9px;
-	margin-bottom:-15px;
-	padding-bottom:8px;
-	float: left;
-	width: 175px;
-	height: 160px;
-	border: 1px solid blue;
-	position: static;
-	background-color: black;	
-}
 
 #show{
 	position:relative;

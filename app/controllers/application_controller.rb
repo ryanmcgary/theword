@@ -5,8 +5,10 @@ class ApplicationController < ActionController::Base
     def layout_by_resource
       if devise_controller?
         "application_devise"
-      elsif params[:layout] == "embed"
-        "application_embed"       
+      elsif params[:layout] == "embed_light"
+        "application_embed_light"   
+      elsif params[:layout] == "embed_dark"
+        "application_embed_dark"    
       else 
         "application"
       end

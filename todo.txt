@@ -1,14 +1,34 @@
-Add embed feature
-  Passing info in url
-	using iframe
-	change color scheme based on passed url
+Passing a params populates right side bar
+
+Add Name / Position / Company
+
+Not logged in menu bar.
+
+Breadcrumb
+
+Left Partial
+Lists items (users/words/recordings) passed, Allows you to create new items
+
+Right Partial
+Lists playable recordings (by user or word), Allows you to create new recording
+
+Recording Partial
+Recording box > can be shared and embeded
+
+Just use .mp3 on end of twilio URL  
+
+
+
+
+
+
 	
 Change concept to secure/confirmed reviews
 add signin with twitter and linkedin
 Integrate project with EC2  		Online > Move MP3 files to EC2 
 
 
-Break add call, add text into partial.
+
 
 Launch rails site
 Update resume
@@ -20,11 +40,6 @@ Add playlist embed feature			maybe
 Add Upvotes.                 		prob offline
 Make Screencast                 Online maybe
 
-Launch with ADD CALL
-Launch with ADD TEXT
-ADD MP3
-ADD PICTURE
-ADD VIDEO
 
 Right after launch:
 Add upload audio/attach video
@@ -37,6 +52,7 @@ Outsource an Iphone app
 Sister Sites!
 
 Do offline:
+Make popular and latest drop down / order by menu   
 Add Javascript player                                     
 Redesign with slider and breadcrumb, share icons elsewhere
 Add Upvotes: Sort recordings by upvote (most/least), date added (old/new)
@@ -75,7 +91,15 @@ picture upload
 
 4157845905
 
-done: 
+done:   
+add share individual review 
+Add hide review on mouseover for admins   
+Add select all to embed boxes
+Share opens popup feed 
+Add embed feature
+  Passing info in url
+	using iframe
+	change color scheme based on passed url
 offline (can't confirm it working though) Just share using Addthis. Use add this aquatics buttons!!!   
 require > recording.short_text > limit 140, require name, require phone#, 
 offline DO ALL VALIDATION: Limit Length of short_text, require name, require short text  
